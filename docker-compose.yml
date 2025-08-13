@@ -11,6 +11,8 @@ services:
       - PYTHONUNBUFFERED=1
     volumes:
       - ./model_cache:/root/.cache
+      - ./model_cache/torch:/root/.cache/torch
+      - ./model_cache/easyocr:/root/.EasyOCR
     restart: unless-stopped
     mem_limit: 8g
     mem_reservation: 4g
