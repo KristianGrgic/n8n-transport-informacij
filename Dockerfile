@@ -16,6 +16,8 @@ COPY pdf_extractor_clean.py .
 
 RUN mkdir -p /tmp/pdf_parser
 
+RUN python -c "from docling import DocumentConverter; converter = DocumentConverter(); print('Models preloaded')"
+
 EXPOSE 8080
 
 RUN pip install gunicorn
