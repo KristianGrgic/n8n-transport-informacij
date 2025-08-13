@@ -1,0 +1,7 @@
+.DS_Store
+.claude
+.gitignore
+README.md
+
+.git/
+venv/

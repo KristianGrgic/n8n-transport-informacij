@@ -87,11 +87,12 @@ def request_entity_too_large(_):
     }), 413
 
 if __name__ == '__main__':
-    port = 5001
+    import os
+    port = int(os.environ.get('PORT', 5001))
 
-    print(f"Starting PDF Parser API on http://localhost:{port}")
+    print(f"Starting PDF Parser API on port {port}")
     print("Endpoints:")
     print("  - GET  /health - Health check")
     print("  - POST /parse  - Parse PDF file")
 
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=port, debug=False)
